@@ -1,0 +1,39 @@
+﻿@model WebAppEjercicioFinal.Models.Producto
+
+@{
+    ViewData["Title"] = "Eliminar";
+}
+
+<h1>Eliminar</h1>
+
+<h3>Esta seguro de eliminar el producto?</h3>
+<div>
+    <h4>Producto</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NombreProducto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NombreProducto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CantidadProducto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CantidadProducto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PrecioProducto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PrecioProducto)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ProductoID" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-action="Index"><i class="fas fa-backward">Atrás</i></a>
+    </form>
+</div>
